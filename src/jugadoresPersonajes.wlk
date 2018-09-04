@@ -17,12 +17,14 @@ object floki {
 
 object mario {
 	var valorRecolectado = 0
-	
+	var alturaUltElemento = 0
+	var feliz = self.esFeliz()
 	method encontrar(elemento) {
 	    valorRecolectado += elemento.valorQueOtorga()
 	    elemento.recibirTrabajo()
-	    // ... acá hay que agregar una línea ...
+	    alturaUltElemento = elemento.altura()
 	}
+	method esFeliz() = valorRecolectado > 30 || alturaUltElemento >= 10
 }
 
 

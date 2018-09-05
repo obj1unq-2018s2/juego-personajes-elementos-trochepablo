@@ -1,20 +1,20 @@
 object castillo {
-	var property altura = 20
+	const property altura = 20
 	var property defensa = 150
 	method recibirAtaque(valor){
 		self.defensa(self.defensa() - valor)
 	}
 	method valorQueOtorga() = defensa / 5
 	method recibirTrabajo(){
-		if (self.defensa() < 200) {
-			if(self.defensa() + 20 > 200){
-				self.defensa(200)
-			} else{
-				self.defensa(self.defensa() + 20)	
-			}
-		}
+		self.defensa((self.defensa() + 20).min(200))
+		//if (self.defensa() < 200) {
+		//	if(self.defensa() + 20 > 200){
+		//		self.defensa(200)
+		//	} else{
+		//		self.defensa(self.defensa() + 20)	
+		//	}
+		//}
 	}
-	
 }
 
 object aurora {

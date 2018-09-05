@@ -1,0 +1,28 @@
+import jugadoresPersonajes.*
+import elementos.*
+import armas.*
+
+describe "1" {
+
+	test "consumo aurora mario" {
+		luisa.personajeActivo(mario)
+		floki.arma(jabalina);
+		mario.encontrar(aurora)
+		mario.encontrar(aurora)
+		mario.encontrar(aurora)
+		assert.equals(45, mario.valorRecolectado())
+	}
+	
+	test "mario es feliz " {
+		mario.encontrar(castillo)
+		assert.equals(true, mario.esFeliz())
+	}
+	
+	test "consumo" {
+		floki.arma(jabalina)
+		luisa.personajeActivo(mario)
+		luisa.aparece(tipa)
+	}
+}
+
+

@@ -1,5 +1,5 @@
 object luisa {
-	var personajeActivo = noHayPersonaje
+	var property personajeActivo = noHayPersonaje
 	method aparece(elemento){
 		personajeActivo.encontrar(elemento)
 	}
@@ -7,7 +7,7 @@ object luisa {
 
 
 object floki {
-	var arma
+	var property arma
 	
 	method encontrar(elemento) {
 	    if (arma.estaCargada()) {
@@ -19,7 +19,7 @@ object floki {
 
 
 object mario {
-	var valorRecolectado = 0
+	var property valorRecolectado = 0
 	var alturaUltElemento = 0
 	var feliz = self.esFeliz()
 	method encontrar(elemento) {

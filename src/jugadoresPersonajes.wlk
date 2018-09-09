@@ -10,7 +10,7 @@ object floki {
 	var property arma
 	
 	method encontrar(elemento) {
-	    if (arma.estaCargada()) {
+	    if (arma.cargada()) {
 	        elemento.recibirAtaque(arma.potencia()) 
 	        arma.registrarUso()
 	    }

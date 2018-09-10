@@ -3,21 +3,19 @@ import elementos.*
 import armas.*
 
 
-test "1 - consumo aurora mario" {
+test "1" {
 	luisa.personajeActivo(mario)
 	floki.arma(jabalina);
 	mario.encontrar(aurora)
 	mario.encontrar(aurora)
 	mario.encontrar(aurora)
 	assert.equals(45, mario.valorRecolectado())
-}
-
-test "mario es feliz " {
 	mario.encontrar(castillo)
 	assert.equals(true, mario.esFeliz())
 }
 
-test "2 - consumo" {
+
+test "2" {
 	floki.arma(jabalina)
 	luisa.personajeActivo(mario)
 	luisa.aparece(tipa)
@@ -30,6 +28,18 @@ test "2 - consumo" {
 	assert.equals(false, aurora.vida())
 	assert.equals(150, castillo.defensa())
 	assert.equals(false, jabalina.cargada())
+}
+
+test "3" {
+	floki.arma(ballesta)
+	luisa.personajeActivo(floki)
+	luisa.aparece(aurora)
+	luisa.aparece(castillo)
+	assert.equals(0, mario.valorRecolectado())
+	assert.equals(true, aurora.vida())
+	assert.equals(146, castillo.defensa())
+	assert.equals(true, jabalina.cargada())	
+	assert.equals(8, ballesta.flechas())
 }
 
 
